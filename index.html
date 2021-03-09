@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>just for you</title>
+    <style>
+        body {
+            font-family: Poppins;
+            min-height: 1200vh;
+            background-color: cadetblue;
+        }
+
+        .container {
+            min-height: 750px;
+            text-align: center;
+            background-image: url(img/bg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        h2 {
+            padding-top: 200px;
+        }
+
+        .btn1 {
+            font-size: large;
+            font-family: Poppins;
+            background-color: aquamarine;
+            border-radius: 30px;
+        }
+
+        .btn2 {
+            margin-top: 500vh;
+            margin-left: 40%;
+            font-size: large;
+            font-family: Poppins;
+            background-color: aquamarine;
+            border-radius: 30px;
+        }
+
+        .btn3 {
+            margin-top: 1000vh;
+            text-align: end;
+            font-size: large;
+            font-family: Poppins;
+            background-color: aquamarine;
+            border-radius: 30px;
+        }
+
+        .btn4 {
+            margin-top: 1000vh;
+            float: right;
+            font-size: large;
+            font-family: Poppins;
+            background-color: aquamarine;
+            border-radius: 30px;
+        }
+
+        .ucapan {
+            margin-bottom: 500px;
+        }
+
+        #teks {
+            font-size: 2rem;
+        }
+
+        .line {
+            animation: anim 0.5s infinite linear;
+            font-size: 2rem;
+        }
+
+        @keyframes anim {
+            0%,100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>halo, selamat datang</h2>
+        <p>pencet tombol dibawah</p>
+        <button onclick="btn1()" class="btn1">click aku</button>
+    </div>
+    <br>
+    <button class="btn2" onclick="btn2()">aku disini</button>
+    <br>
+    <button class="btn3" onclick="btn3()">click me first</button>
+    <button class="btn4" onclick="btn4()">click for surprise</button>
+    <br><br>
+    <div class="ucapan">
+        <span id="teks"></span>
+        <span class="line">|</span>
+    </div>
+
+
+    <script>
+        function btn1() {
+           var nama = prompt('kenalan dulu dong namanya siapa ?')
+           alert(`halo, ${nama}`)
+           alert(`${nama}, kita main sebentar yuk`)
+
+           function kgn() {
+                var kangen = confirm('etapi aku mau nanya nih, kamu kangen aku ngga ? [ok = "ya" | cancel = "tidak"]')
+                    if (kangen === true) {
+                        alert('hahaha, cie kangen')
+                    }else {
+                        alert('yahh, kirain kangen aku wkwkw')
+                    }
+           }
+           kgn();
+
+           alert('oke, sekarang kita mulai aja yaaa')
+           var gombal = confirm('oiyaa kamu ngga buru buru kan ? [ok = "ya" | cancel = "tidak"]')
+                if (gombal === true) {
+                    alert('yahh sebentar doang kok ini hehe')
+                }else {
+                    alert('oalah kirain buru buru gitu harus balik ke kayangan *eaaaaaa')
+                    alert('hahahah maafkan gombalan recehnya wkwkwkw')
+                }
+           alert('aku cuma mau bilang')
+           alert('kamu itu cantik')
+           alert('tapi sayang ...')
+           alert('bukan punya aku wkwkwk')
+           alert('sekarang coba scroll cari tombol "aku disini"')
+           
+        }
+
+        function btn2() {
+            alert('eh ketemu juga ya wkwkw')
+            alert('tapi belum selesai gamenya')
+            alert('sekarang kamu coba cari tombol "click me first"')
+        }
+
+        function btn3() {
+            alert('cepet juga ya kamu nemuinnya wkwkw')
+            alert('oke karena udah ketemu juga, sekarang aku mau kamu klik tombol di sebelah kanan')
+        }
+
+        function btn4() {
+            var ucapan = "aku cuma mau bilang, semangat ngerjain skripsiannya semoga dilancarin sampai hari kelulusannya yaaa. pokoknya doa doa yang paling baik buat kamu semua wkwkwk, makasih juga udah luangin waktunya buat main game yang unfaedah ini hahaha, mau minta maaf juga kalo kadang sifat aku suka bikin kamu ngerasa ilfeel hahaha, udah sih gitu aja ya pokoknya semangat ngerjainnya"
+            var i = 0;
+            type();
+            function type() {
+                if (i < ucapan.length) {
+                    document.getElementById("teks").innerHTML += ucapan.charAt(i);
+                    i++;
+                    setTimeout(type, 100);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
